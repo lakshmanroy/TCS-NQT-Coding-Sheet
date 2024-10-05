@@ -1,15 +1,15 @@
 public class MaxProduct_SubArray {
-    public static long maxProduct(int arr[]){
+    public static int maxProduct(int arr[]){
         if(arr==null || arr.length==0){
             return 0;
         }
-        long maxProduct=arr[0];
-        long minProduct=arr[0];
-        long result=arr[0];
+        int maxProduct=arr[0];
+        int minProduct=arr[0];
+        int result=arr[0];
         
         for(int i=1;i<arr.length;i++){
             if(arr[i]<0){
-                long temp=maxProduct;
+                int temp=maxProduct;
                 maxProduct=minProduct;
                 minProduct=temp;
             }
